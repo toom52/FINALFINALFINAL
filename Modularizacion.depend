@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1655093168 source:c:\users\tomas\onedrive\documentos\github\modularizacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1655063833 source:c:\users\dimar\onedrive\documentos\github\modularizacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1655715071 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655713839 c:\users\tomas\onedrive\documentos\github\codigo-tp-final\consumo.h
+
+1655715059 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655696924 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1655696868 source:c:\users\tomas\onedrive\documentos\github\finalfinal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655698090 c:\users\tomas\onedrive\documentos\github\finalfinal\consumo.h
+
+1655696924 source:c:\users\tomas\onedrive\documentos\github\finalfinal\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1655754598 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655713839 c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\consumo.h
+
+1655754696 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655696924 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
