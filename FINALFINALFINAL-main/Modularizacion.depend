@@ -92,3 +92,20 @@
 	<conio.h>
 	"menu.h"
 
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.h
+
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.h
+
