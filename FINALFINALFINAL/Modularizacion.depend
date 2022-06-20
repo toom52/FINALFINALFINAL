@@ -1,0 +1,145 @@
+# depslib dependency file v1.0
+1655093168 source:c:\users\tomas\onedrive\documentos\github\modularizacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1655063833 source:c:\users\dimar\onedrive\documentos\github\modularizacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1655715071 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655713839 c:\users\tomas\onedrive\documentos\github\codigo-tp-final\consumo.h
+
+1655715059 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655696924 source:c:\users\tomas\onedrive\documentos\github\codigo-tp-final\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1655696868 source:c:\users\tomas\onedrive\documentos\github\finalfinal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655698090 c:\users\tomas\onedrive\documentos\github\finalfinal\consumo.h
+
+1655696924 source:c:\users\tomas\onedrive\documentos\github\finalfinal\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1655754598 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655713839 c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\consumo.h
+
+1655754696 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655696924 source:c:\users\tomas\onedrive\escritorio\prog y labo 1\2ndo parcial\tps\github\codigo-tp-final\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1655756080 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655756080 c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\consumo.h
+
+1655758474 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	"menu.h"
+
+1655757398 c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\menu.h
+
+1655758645 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.h
+
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.h
+
+1655760676 source:c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"cliente.h"
+
+1655760676 c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\cliente.h
+
+1655760676 source:c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655760676 c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\consumo.h
+
+1655762876 source:c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655760676 c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\menu.h
+
+1655761222 source:c:\users\jerec\desktop\thelastdance\finalfinalfinal-main123\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	"menu.h"
+	"cliente.h"
+
