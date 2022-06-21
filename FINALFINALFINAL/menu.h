@@ -15,6 +15,8 @@ void menuBusquedaCliente();
 
 ///MENU DE CONSUMOS DE CLIENTES
 void menuConsumos();
+void menuMostrarConsumos();
+void menuModificarConsumos();
 
 /// MENU A-B CLIENTE
 /// ME FALTAN LAS FUNCIONES PARA ESTE MENU
