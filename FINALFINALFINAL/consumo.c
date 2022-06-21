@@ -4,6 +4,8 @@
 #define ESC 27
 #include <conio.h>
 #include "consumo.h"
+#include <dos.h>
+#include "time.h"
 
 char *CargarFecha()///Carga fecha por teclado,devuelve string
 {
@@ -170,8 +172,10 @@ stConsumo cargaConsumo()///Carga estructura consumo
     return c;
 }
 
-void muestraUnConsumo(stConsumo c)///muestra un consumo
+void muestraUnConsumo(stConsumo c,int flag)///muestra un consumo
 {
+    if(flag==c.baja || flag==2)
+    {
     printf("\n=============================================");
     printf("\nID CONSUMO: %d",c.id);
     printf("\nFECHA: %s.",c.fecha);
@@ -179,6 +183,8 @@ void muestraUnConsumo(stConsumo c)///muestra un consumo
     printf("\nID CLIENTE: %d",c.idCliente);
     printf("\nESTADO(0 ACTIVO, 1 INACTIVO): %d", c.baja);
     printf("\n=============================================");
+    }
+
 }
 
 void CargaArchivoConsumo(char ArchivoConsumo[])///Carga consumos a archivo
@@ -216,7 +222,7 @@ void CargaArchivoConsumo(char ArchivoConsumo[])///Carga consumos a archivo
     }
 }
 
-void muestraArchivoConsumo(char ArchivoConsumo[], int idCl, char f[])///Muestra archivo consumo.dat
+void muestraArchivoConsumo(char ArchivoConsumo[], int idCl, char f[],int flag)///Muestra archivo consumo.dat
 {
     stConsumo c;
     FILE *archi= fopen(ArchivoConsumo, "rb");
@@ -229,7 +235,7 @@ void muestraArchivoConsumo(char ArchivoConsumo[], int idCl, char f[])///Muestra 
         {
             while(fread(&c, sizeof(stConsumo),1,archi)>0)
             {
-                muestraUnConsumo(c);
+                muestraUnConsumo(c,flag);
             }
         }
         else
@@ -240,19 +246,19 @@ void muestraArchivoConsumo(char ArchivoConsumo[], int idCl, char f[])///Muestra 
                 {
                     if (strncmp(c.fecha,f,strlen(f))==0 && c.idCliente==idCl)
                     {
-                        muestraUnConsumo(c);
+                        muestraUnConsumo(c,flag);
                     }
                 }
             }
             else
             {
-                if(idCl<0 && f==NULL)///muestra consumo de cliente
+                if(idCl>0 && f==NULL)///muestra consumo de cliente
                 {
                     while(fread(&c,sizeof(stConsumo),1,archi)>0)
                     {
                         if (idCl==c.idCliente)
                         {
-                            muestraUnConsumo(c);
+                            muestraUnConsumo(c,flag);
                         }
                     }
                 }
@@ -262,7 +268,7 @@ void muestraArchivoConsumo(char ArchivoConsumo[], int idCl, char f[])///Muestra 
                     {
                         if (strncmp(c.fecha,f,strlen(f))==0)
                         {
-                            muestraUnConsumo(c);
+                            muestraUnConsumo(c,flag);
                         }
                     }
                 }
@@ -283,8 +289,9 @@ int idConsumoUnico(char ArchivoConsumo[])///revisa ultimo id consumo y devuelve 
         if(fread(&c,sizeof(stConsumo),1,archi)>0)
         {
             id=c.id+1;
-            fclose(archi);
         }
+
+    fclose(archi);
     }
     return id;
 }
@@ -312,3 +319,80 @@ void ModificarConsumo(char ArchivoConsumo[],int idCon,int datos,int flag) ///Car
     }
 }
 
+void AltayBajaCon(char ArchivoConsumo[],int idCon,int ab)
+{
+    stConsumo c;
+    FILE *archi= fopen(ArchivoConsumo, "rb+");
+    if(archi)
+    {
+    fseek(archi,(idCon-1)*sizeof(stConsumo),SEEK_SET);
+    fread(&c,sizeof(stConsumo),1,archi);
+    c.baja=ab;
+    fseek(archi,(idCon-1)*sizeof(stConsumo),SEEK_SET);
+    fwrite(&c,sizeof(stConsumo),1,archi);
+
+        fclose(archi);
+    }
+}
+///----------------------------CARGA RANDOM CONSUMO--------------------------------------\\\
+
+stConsumo cargaConsumoRnd()
+{
+    stConsumo c;
+    c.idCliente=getIDclienteRand(c.idCliente);
+    getFechaRand(c.fecha);
+    c.datosConsumidos=getDatosRand(c.datosConsumidos);
+    c.baja=0;
+
+    return c;
+}
+int getIDclienteRand(int idCl)
+{
+    int clmin=1,clmax=50;
+    srand(time(0));
+    int id=(rand()%(clmax-clmin+1))+clmin;
+    return id;
+}
+
+char getFechaRand(char f[])
+{
+    int diaMin=1,diaMax=28,mesMin=1,mesMax=6,anio=2022;
+    char fecha[10];
+    srand(time(0));
+        int dia=(rand()%(diaMax-diaMin+1))+diaMin;
+        int mes=(rand()%(mesMax-mesMin+1))+mesMin;
+
+    sprintf(fecha,"%d/%d/%d", dia,mes,anio);
+    strcpy(f,fecha);
+
+}
+
+int getDatosRand(int d)
+{
+    d=rand()%10000;
+      return d;
+}
+
+void CargaArchivoConsumoRnd(char ArchivoConsumo[])
+{
+    stConsumo c;
+    int static id=1;
+    FILE *archi=fopen(ArchivoConsumo,"ab");
+    if(archi)
+    {
+
+        id=idConsumoUnico("consumo.dat");
+
+        for (int i=0;i<2000;i++)
+        {
+            c=cargaConsumoRnd();
+            c.id=id;
+            fwrite(&c,sizeof(stConsumo), 1, archi);
+            sleep(1);
+            id++;
+            i++;
+        }
+        fclose(archi);
+    }
+    printf("\n===========CARGA FINALIZADA===========\n");
+}
