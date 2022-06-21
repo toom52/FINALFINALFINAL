@@ -194,7 +194,7 @@ void Alta_Baja_Consumo()
     else
     {
         printf("\nConsumo encontrado!");
-        printf("\nPresione 1 para dar de baja el consumo, 0 para darlo de alta");
+        printf("\nPresione 1 para dar de baja el consumo, 0 para darlo de alta: ");
         fflush(stdin);
         scanf("%d",&ab);
         AltayBajaCon("consumo.dat",idCON,ab);
