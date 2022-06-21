@@ -114,7 +114,7 @@ void muestraUnCliente (stCliente c, int flag)
         }
 
 
-        printf("\n ==============================");
+        printf("\n ==============================\n");
     }
 }
 
@@ -389,6 +389,7 @@ int buscarClienteXDni (char nombreArchivo[]){
                 found=1;
                 muestraUnCliente(c,1);
                 muestraUnCliente(c,0);
+                muestraArchivoConsumo("consumo.dat",c.nroCliente,NULL,2);
             }
         }
 
