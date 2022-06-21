@@ -218,7 +218,7 @@ void menuBusquedaCliente ()
         }
 }
 
-/// MENU DE CONSUMOS DE CLIENTES
+///MENU DE CONSUMOS DE CLIENTES
 
 void menuConsumos ()
 {
@@ -239,13 +239,16 @@ void menuConsumos ()
         switch (opcion)
             {
             case '1':
-                cargaConsumo();
+                CargaArchivoConsumo("consumo.dat")
+                ;
                 break;
             case '2':
-                muestraUnConsumo();
+                menuMostrarConsumos()
+                ;
                 break;
             case '3':
-                ModificarConsumo();
+                menuModificarConsumos()
+                ;
                 break;
             default:
                 printf(".........Ingreso una opcion no valida.........");
@@ -258,3 +261,94 @@ void menuConsumos ()
         }
 }
 
+void menuMostrarConsumos()
+{
+    char opcion = 0;
+
+    while (opcion != 27)
+    {
+        system("cls");
+        printf("\nMOSTRAR CONSUMOS");
+        printf("\n1. Mostrar listado de consumos activos");
+        printf("\n2. Mostrar los consumos de un cliente");
+        printf("\n3. Mostrar los consumos de una fecha");
+        printf("\n4. Mostrar un consumo por fecha y cliente");
+        printf("\n5. Mostrar listado de consumos inactivos");
+        printf("\n6. Mostrar listado de consumos completo");
+        printf("\nESC. Volver al menu anterior");
+
+        opcion = getch();
+        system("cls");
+
+        switch (opcion)
+            {
+            case '1':
+                MostrarConsumoXUSUARIO()
+                ;
+                break;
+            case '2':
+                MostrarConsumoXFECHA()
+                ;
+                break;
+            case '3':
+                MostrarConsumoXFyU()
+                ;
+                break;
+            case '4':
+                muestraArchivoConsumo("consumo.dat",0,NULL,0);
+                ;
+                break;
+            case '5':
+                muestraArchivoConsumo("consumo.dat",0,NULL,1)
+                ;
+                break;
+            case '6':
+                muestraArchivoConsumo("consumo.dat",0,NULL,2)
+                ;
+                break;
+            default:
+                printf(".........Ingreso una opcion no valida.........");
+                getch();
+                break;
+            case 27:
+                menuConsumos ();
+                break;
+            }
+        }
+}
+
+void menuModificarConsumos()
+{
+    char opcion = 0;
+
+    while (opcion != 27)
+    {
+        system("cls");
+        printf("\nMODIFICAR CONSUMO");
+        printf("\n1. Modificar cantidad de datos consumidos");
+        printf("\n2. Alta-Baja de un consumo");
+        printf("\nESC. Volver al menu anterior");
+
+        opcion = getch();
+        system("cls");
+
+        switch (opcion)
+            {
+            case '1':
+                ModificarConsumoUsuario()
+                ;
+                break;
+            case '2':
+                Alta_Baja_Consumo()
+                ;
+                break;
+            default:
+                printf(".........Ingreso una opcion no valida.........");
+                getch();
+                break;
+            case 27:
+                menuConsumos ();
+                break;
+            }
+        }
+}
