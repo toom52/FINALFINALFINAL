@@ -67,3 +67,79 @@
 	<stdlib.h>
 	<conio.h>
 
+1655756080 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655756080 c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\consumo.h
+
+1655758474 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	"menu.h"
+
+1655757398 c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\menu.h
+
+1655758645 source:c:\users\jerec\desktop\tp fianlfinalfinal\finalfinalfinal-main\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\consumo.h
+
+1655759672 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655759672 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal-main\menu.h
+
+1655838602 source:c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"cliente.h"
+
+1655837941 c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\cliente.h
+
+1655759672 source:c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+
+1655759672 c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\consumo.h
+
+1655760569 source:c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	"menu.h"
+	"cliente.h"
+
+1655759672 c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\menu.h
+
+1655837690 source:c:\users\franco\desktop\programacion\utn-programacion\programacion y laboratorio 1\tp final unido\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
