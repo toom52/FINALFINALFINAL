@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include "menu.h"
 
 /// MENU PRINCIPAL
 
@@ -11,7 +12,8 @@ void menuPrincipal()
     while (opcion != 27)
         {
         system("cls");
-        printf("\n\n......... DARK MOBILE ------ MENU PRINCIPAL .........");
+        printf("\n\n......... MENU PRINCIPAL .........");
+        printf("\n\n......... DARK SIDE MOBILE .........");
         printf("\n1. .........CLIENTES.........");
         printf("\n2. .........CONSUMOS.........");
         printf("\nESC. .........Salir.........");
@@ -49,34 +51,44 @@ void menuClientes()
 
     while (opcion != 27)
         {
+        system("pause");
         system("cls");
         printf("\t.........CLIENTES.........");
         printf("\n1. Nuevo cliente");
         printf("\n2. Lista de clientes");
-        printf("\n3. Buscar clientes");
-        printf("\n4. Alta o baja de un cliente");
-        printf("\n5. Modificar un cliente");
+        printf("\n3. Lista de clientes de baja");
+        printf("\n4. Buscar clientes");
+        printf("\n5. Modificar cliente ");
+        printf("\n6. Baja de cliente");
+        printf("\n7. Alta de cliente");
         printf("\nESC. Volver al menu principal");
+
 
         opcion = getch();
         system("cls");
         switch (opcion)
             {
             case '1':
-//                cargaUnClienteManual();
+                cargarArchivoClientes("clientes.dat");
+                printf("\n Carga con exito");
                 break;
             case '2':
-//                cargarArchivoClientes();
+                muestraArchivoClientes("clientes.dat",0);///0 muestra los activos
                 break;
             case '3':
-                ;
+                muestraArchivoClientes("clientes.dat",1);/// 1 muestra los de baja
                 break;
             case '4':
-                ;
+                buscarClienteXDni("clientes.dat");
                 break;
             case '5':
-                ;
+                cambiarChar();
                 break;
+            case '6':
+                altaBajaCliente(1); /// 1 el usuario esta dado de baja
+                break;
+            case '7':
+                altaBajaCliente(0); /// 0 esta activo el usuario
             case 27:
                 menuPrincipal();
                 break;
@@ -109,10 +121,10 @@ void altaBajaMenu()
         switch (opcion)
             {
             case '1':
-//                ();
+///                ();
                 break;
             case '2':
-//                ();
+///                ();
                 break;
             case 27:
                 menuClientes();
@@ -126,6 +138,7 @@ void altaBajaMenu()
 }
 
 /// MENU PARA IMPRIMIR CLIENTES
+
 void imprimirClientes ()
 {
     char opcion = 0;
@@ -167,8 +180,7 @@ void imprimirClientes ()
         }
 }
 
-
-///Menu de busqueda de clientes
+///MENU DE BUSQUEDA DE CLIENTES
 
 void menuBusquedaCliente ()
 {
@@ -217,7 +229,7 @@ void menuBusquedaCliente ()
         }
 }
 
-///Menu de consumos de clientes
+///MENU DE CONSUMOS DE CLIENTES
 
 void menuConsumos ()
 {
