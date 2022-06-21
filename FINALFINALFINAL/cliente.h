@@ -18,8 +18,7 @@ typedef struct{
 
 stCliente cargaUnClienteManual ();
 stCliente cargaUnClienteRandom ();
-void muestraUnCliente (stCliente c);
-int getNroClienteRand (int n);
+void muestraUnCliente (stCliente c, int flag);
 void getNombresRand(char n[]);
 void getApellidosRand(char a[]);
 void getDniRand(char d[]);
@@ -29,9 +28,17 @@ void getDomicilioRand(char d[]);
 void cargarArchivoClientesRandom (char nombreArchivo[]);
 void cargarArchivoClientes (char nombreArchivo[]);
 int ultimoId(char nombreArchivo[]);
-void muestraArchivoClientes (char nombreArchivo[]);
+int ultimoNroCliente(char nombreArchivo[]);
+void muestraArchivoClientes (char nombreArchivo[], int flag);
 void altaBajaCliente(int flag);
-int buscaIdUsuario2(char nombreArchivo[], int nroClienteBuscar);
-void modificarCliente(char nombreArchivo[], int idCliente,int flag);
+int buscaIdUsuario(char nombreArchivo[], int nroClienteBuscar);
+void modificarBajaCliente(char nombreArchivo[], int idCliente,int flag);
+int buscarClienteXDni (char nombreArchivo[]);
+void cambiarChar();
+void modificarMovil(char nombreArchivo[], int idCliente);
+void modificarApellido(char nombreArchivo[], int idCliente);
+void modificarDni(char nombreArchivo[], int idCliente);
+void modificarDomicilio(char nombreArchivo[], int idCliente);
 
 #endif // CLIENTE_H_INCLUDED
+
