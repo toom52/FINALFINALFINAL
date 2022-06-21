@@ -151,3 +151,40 @@
 
 1655767856 c:\users\tomas\onedrive\documentos\github\finalfinalfinal\finalfinalfinal\cliente.h
 
+1655840989 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\consumo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	<dos.h>
+	"time.h"
+
+1655840379 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\consumo.h
+
+1655840379 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"consumo.h"
+	"menu.h"
+	"cliente.h"
+
+1655840379 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\menu.h
+
+1655840834 c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\cliente.h
+
+1655841652 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"menu.h"
+
+1655840904 source:c:\users\franco\documents\github\finalfinalfinal\finalfinalfinal\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"cliente.h"
+
