@@ -12,7 +12,7 @@ void menuPrincipal()
     while (opcion != 27)
         {
         system("cls");
-        printf("\n\n......... MENU PRINCIPAL .........");
+        printf("\n......... MENU PRINCIPAL .........");
         printf("\n\n......... DARK SIDE MOBILE .........");
         printf("\n1. .........CLIENTES.........");
         printf("\n2. .........CONSUMOS.........");
@@ -49,36 +49,46 @@ void menuClientes()
 {
     char opcion = 0;
 
-    while (opcion != 27)
+while (opcion != 27)
         {
+        system("pause");
         system("cls");
-        printf("\t.........CLIENTES.........");
+        printf("\n.........CLIENTES.........");
         printf("\n1. Nuevo cliente");
         printf("\n2. Lista de clientes");
-        printf("\n3. Buscar clientes");
-        printf("\n4. Alta o baja de un cliente");
-        printf("\n5. Modificar un cliente");
+        printf("\n3. Lista de clientes de baja");
+        printf("\n4. Buscar clientes");
+        printf("\n5. Modificar cliente ");
+        printf("\n6. Baja de cliente");
+        printf("\n7. Alta de cliente");
         printf("\nESC. Volver al menu principal");
+
 
         opcion = getch();
         system("cls");
         switch (opcion)
             {
             case '1':
-                cargaUnClienteManual();
+                cargarArchivoClientes("clientes.dat");
+                printf("\n Carga con exito");
                 break;
             case '2':
-                muestraArchivoClientes();
+                muestraArchivoClientes("clientes.dat",0);///0 muestra los activos
                 break;
             case '3':
-                menuBusquedaCliente();
+                muestraArchivoClientes("clientes.dat",1);/// 1 muestra los de baja
                 break;
             case '4':
-                altaBajaMenu();
+                buscarClienteXDni("clientes.dat");
                 break;
             case '5':
-                modificarCliente();
+                cambiarChar();
                 break;
+            case '6':
+                altaBajaCliente(1); /// 1 el usuario esta dado de baja
+                break;
+            case '7':
+                altaBajaCliente(0); /// 0 esta activo el usuario
             case 27:
                 menuPrincipal();
                 break;
@@ -227,7 +237,7 @@ void menuConsumos ()
     while (opcion != 27)
         {
         system("cls");
-        printf("\nCONSUMOS");
+        printf("\n.........CONSUMOS.........");
         printf("\n1. Cargar un consumo de un cliente");
         printf("\n2. Mostrar los consumos de un cliente");
         printf("\n3. Modificar los consumos de un cliente");
@@ -267,12 +277,13 @@ void menuMostrarConsumos()
 
     while (opcion != 27)
     {
+        system("pause");
         system("cls");
         printf("\nMOSTRAR CONSUMOS");
-        printf("\n1. Mostrar listado de consumos activos");
-        printf("\n2. Mostrar los consumos de un cliente");
-        printf("\n3. Mostrar los consumos de una fecha");
-        printf("\n4. Mostrar un consumo por fecha y cliente");
+        printf("\n1. Mostrar los consumos de un cliente");
+        printf("\n2. Mostrar los consumos de una fecha");
+        printf("\n3. Mostrar un consumo por fecha y cliente");
+        printf("\n4. Mostrar listado de consumos activos");
         printf("\n5. Mostrar listado de consumos inactivos");
         printf("\n6. Mostrar listado de consumos completo");
         printf("\nESC. Volver al menu anterior");
