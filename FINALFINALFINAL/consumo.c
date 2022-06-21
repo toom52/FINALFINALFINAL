@@ -176,13 +176,13 @@ void muestraUnConsumo(stConsumo c,int flag)///muestra un consumo
 {
     if(flag==c.baja || flag==2)
     {
-    printf("\n=============================================");
+    printf("=============================================");
     printf("\nID CONSUMO: %d",c.id);
     printf("\nFECHA: %s.",c.fecha);
     printf("\nDATOS CONSUMIDOS: %dMB",c.datosConsumidos);
     printf("\nID CLIENTE: %d",c.idCliente);
     printf("\nESTADO(0 ACTIVO, 1 INACTIVO): %d", c.baja);
-    printf("\n=============================================");
+    printf("\n=============================================\n");
     }
 
 }
