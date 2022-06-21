@@ -13,6 +13,8 @@ int BuscaIDConsumo(char ArchivoConsumo[],char fecha[],int idC);
 void MostrarConsumoXFECHA();
 void MostrarConsumoXUSUARIO();
 void MostrarConsumoXFyU();
+void ModificarConsumoUsuario();
+void Alta_Baja_Consumo();
 
 int validarMail(char nombreArchivo[], char email[]);
 int validarNumero(char numero[]);
@@ -31,7 +33,7 @@ int main()
     return 0;
 }
 
-
+///FUNCIONES DE BUSQUEDA DE ARCHIVO CONSUMO
 int BuscarConsumo(char ArchivoConsumo[],char fecha[])///busca un consumo por fecha. Devuelve flag.
 {
     stConsumo c;
@@ -84,6 +86,7 @@ int BuscaIDConsumo(char ArchivoConsumo[],char fecha[],int idC) ///Busca si hay u
             {
                 idCon=c.id;
                 flag=1;
+                muestraUnConsumo(c,2);
             }
         }
 
@@ -104,7 +107,7 @@ void MostrarConsumoXFECHA()
     }
     else
     {
-        muestraArchivoConsumo("consumo.dat",0,fecha);
+        muestraArchivoConsumo("consumo.dat",0,fecha,2);
     }
 
 }
@@ -113,6 +116,7 @@ void MostrarConsumoXUSUARIO()
 {
     int idC=0;
     system("cls");
+    char *fecha[1]= {NULL};
     printf("\n Ingrese su numero de cliente: ");
     fflush(stdin);
     scanf("%d",&idC);
@@ -122,7 +126,7 @@ void MostrarConsumoXUSUARIO()
     }
     else
     {
-        muestraArchivoConsumo("consumo.dat",idC,NULL);
+        muestraArchivoConsumo("consumo.dat",idC,NULL,2);
     }
 }
 
@@ -143,9 +147,68 @@ void MostrarConsumoXFyU()
     }
     else
     {
-        muestraArchivoConsumo("consumo.dat",idC,fecha);
+        muestraArchivoConsumo("consumo.dat",idC,fecha,2);
     }
 }
+
+///FUNCIONES DE MODIFICACION DE ARCHIVO CONSUMO
+
+void ModificarConsumoUsuario()
+{
+    char fechab[10];
+    int idCON=0, idCL=0, datos=0;
+    printf("\nIngrese Numero de Cliente: ");
+    fflush(stdin);
+    scanf("%d",&idCL);
+    system("cls");
+    strcpy(fechab,CargarFecha());
+    idCON=BuscaIDConsumo("consumo.dat",fechab,idCL);
+    if (idCON==0)
+    {
+        printf("\nNo se encontro un consumo para ese cliente en esa fecha");
+    }
+    else
+    {
+        printf("\nConsumo encontrado! Ingrese nuevo consumo en MB: ");
+        fflush(stdin);
+        scanf("%d",&datos);
+        ModificarConsumo("consumo.dat",idCON,datos,1);
+    }
+    printf("\nCONSUMO ACTUALIZADO CORRECTAMENTE.");
+}
+
+void Alta_Baja_Consumo()
+{
+    char fechab[10];
+    int idCON=0, idCL=0, ab=0;
+    printf("\nIngrese Numero de Cliente: ");
+    fflush(stdin);
+    scanf("%d",&idCL);
+    system("cls");
+    strcpy(fechab,CargarFecha());
+    idCON=BuscaIDConsumo("consumo.dat",fechab,idCL);
+    if (idCON==0)
+    {
+        printf("\nNo se encontro un consumo para ese cliente en esa fecha");
+    }
+    else
+    {
+        printf("\nConsumo encontrado!");
+        printf("\nPresione 1 para dar de baja el consumo, 0 para darlo de alta");
+        fflush(stdin);
+        scanf("%d",&ab);
+        AltayBajaCon("consumo.dat",idCON,ab);
+    }
+    if(ab==0)
+    {
+        printf("\nEL CONSUMO AHORA SE ENCUENTA ACTIVO.");
+    }
+    else
+    {
+        printf("\nEL CONSUMO AHORA SE ENCUENTRA INACTIVO");
+    }
+}
+
 
 
 
