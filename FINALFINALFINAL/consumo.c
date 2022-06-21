@@ -319,7 +319,7 @@ void ModificarConsumo(char ArchivoConsumo[],int idCon,int datos,int flag) ///Car
     }
 }
 
-void AltayBajaCon(char ArchivoConsumo[],int idCon,int ab)
+void AltayBajaCon(char ArchivoConsumo[],int idCon,int ab)/// da de alta o de baja un consumo
 {
     stConsumo c;
     FILE *archi= fopen(ArchivoConsumo, "rb+");
