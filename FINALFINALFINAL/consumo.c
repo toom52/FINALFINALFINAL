@@ -388,7 +388,7 @@ void CargaArchivoConsumoRnd(char ArchivoConsumo[])
             c=cargaConsumoRnd();
             c.id=id;
             fwrite(&c,sizeof(stConsumo), 1, archi);
-            sleep(1);
+
             id++;
             i++;
         }
